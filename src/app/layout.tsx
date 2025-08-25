@@ -1,6 +1,7 @@
-import GalleryComp from '@/components/GalleryComp';
+// import GalleryComp from '@/components/GalleryComp';
 import NavbarComp from '@/components/NavbarComp';
 import FooterComp from '@/components/FooterComp';
+import Script from 'next/script';
 import { ReactNode } from 'react';
 
 export const metadata = {
@@ -21,20 +22,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
 
         {/* Google Analytics */}
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5B2DPJ2PJ7"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-5B2DPJ2PJ7');
-            `,
-          }}
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5B2DPJ2PJ7');
+          `}
+        </Script>
       </head>
       <body>
         <NavbarComp />
