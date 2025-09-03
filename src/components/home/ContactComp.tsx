@@ -1,6 +1,39 @@
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link"
 
 const ContactComp = () =>{
+    useEffect(() => {
+        const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzdgUOy_s6zjJQTgqXQ7GX3H1_w6TvWq1hsBZgH0mSREWt3qXCKA34-qo74-jfDVbHE/exec";
+
+        const form = document.forms.namedItem("home-contact");
+
+        if (form) {
+        const handleSubmit = async (e: Event) => {
+            e.preventDefault();
+            try {
+            await fetch(scriptURL, {
+                method: "POST",
+                body: new FormData(form),
+            });
+            alert("Message sent successfully!");
+            form.reset();
+            } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to send Message.");
+            }
+        };
+
+        form.addEventListener("submit", handleSubmit);
+
+        // cleanup listener
+        return () => {
+            form.removeEventListener("submit", handleSubmit);
+        };
+        }
+    }, []);
+
     return(
         <>
          <section className="contact-section" id="contact-section">
@@ -35,10 +68,10 @@ const ContactComp = () =>{
                     </div>
                 </aside>
 
-                <form action="https://formspree.io/f/xkndylek" method="POST" className="contact__form">
-                    <input type="text" name="name" placeholder="Enter Your Name" required/>
-                    <input type="email" name="email" placeholder="Enter Your Email" required/>
-                    <textarea name="message" rows={4} placeholder="Enter Your Message" required></textarea>
+                <form action="" method="POST" className="contact__form" name="home-contact">
+                    <input type="text" name="Name" placeholder="Enter Your Name" required/>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required/>
+                    <textarea name="Message" rows={4} placeholder="Enter Your Message" required></textarea>
                     <button type="submit" className="btn btn-primary">Send Message</button>
                 </form>
             </div>
