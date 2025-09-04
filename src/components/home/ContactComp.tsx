@@ -69,6 +69,7 @@ const ContactComp = () =>{
                 </aside>
 
                 <form action="" method="POST" className="contact__form" name="home-contact">
+                    <input type="hidden" name="Event" value="IYEO" readOnly />
                     <input type="text" name="Name" placeholder="Enter Your Name" required/>
                     <input type="email" name="Email" placeholder="Enter Your Email" required/>
                     <textarea name="Message" rows={4} placeholder="Enter Your Message" required></textarea>
