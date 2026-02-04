@@ -47,7 +47,7 @@ const ContactComp = () =>{
                     <ul className="contact__details">
                         <li>
                             <i className="uil uil-phone-times"></i>
-                            <Link href='https://wa.me/+6283870026877' target='_blank'>+6283870026877</Link>
+                            <Link href='https://wa.me/+6288213248890' target='_blank'>+6288213248890</Link>
                         </li>
                         <li>
                             <i className="uil uil-envelope"></i>
