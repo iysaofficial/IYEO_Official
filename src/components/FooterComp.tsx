@@ -8,7 +8,7 @@ const FooterComp = () =>{
       <div className="container">
         <div className="wrapper">
           <div className="footer-widget">
-            <h6 className='logo'>International Youth Economy Olympiad</h6>
+            <h6 className='logo'>International Youth Economic Olympiad</h6>
             <p className="desc">
              
             </p>

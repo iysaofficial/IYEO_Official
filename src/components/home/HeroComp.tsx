@@ -9,7 +9,7 @@ const HeroComp = () =>{
             </div>
             <div className="home-content">
                 <h1>IYEO</h1>
-                <h3>International Youth Economy Olympiad</h3>
+                <h3>International Youth Economic Olympiad</h3>
                 {/* <p>Registration is now open for the International Youth Economy Olympiad!
                     <br />Join this prestigious event and gain an unforgettable experience!</p> */}
                     <br />
@@ -22,7 +22,7 @@ const HeroComp = () =>{
                     </div>
                     <br />
                     <br />
-                    <Link href="#" className="btn">Coming Soon 2025</Link>
+                    <Link href="#" className="btn">Coming Soon 2026</Link>
             </div>
         </section>
         </>

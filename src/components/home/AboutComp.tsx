@@ -5,7 +5,7 @@ const AboutComp = () => {
         <div className="about-content">
           <div className="about-text">
             <h1>IYEO</h1>
-            <h5>International Youth Economy Olympiad</h5>
+            <h5>International Youth Economic Olympiad</h5>
             <p>
               The Olympiad is a competition organised to test students skills
               and knowledge in Economics. The event is designed to encourage
